@@ -1,0 +1,282 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'karla';
+	box-sizing: border-box;
+	
+}
+
+html{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100vh;
+
+}
+ .navbar{
+	background-color:#000;
+	color:#d8d8d8;
+	border-bottom: 0.5px solid gray;
+	width: 100%;
+	line-height: 80px;
+	height:80px;
+	font-size: 10px;
+	padding: 0 30px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-family: 'karla';
+}
+ 
+.navbar a{
+	text-decoration: none;
+	color: #d8d8d8;
+	
+}
+
+.navbar a.nav-logo{
+	float: left;
+	height: inherit;
+	line-height: inherit;
+	padding: 0 30px;
+	font-size: 40px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-family: 'karla';
+	color: #d8d8d8;
+	font-weight:bold;	
+}
+.navbar ul{
+	float: right;
+	list-style: none;
+	height: inherit;
+	line-height: inherit;
+	padding: 0 50px;
+	font-size: 15px;
+	
+}
+.navbar ul  li{
+	display: inline-block;
+	
+}
+.navbar ul li a{
+	display: block;
+	text-align: center;
+	min-width: 120px;
+	padding: 0 30px;
+}
+.navbar ul li a: hover{
+	background-color: gray;
+}
+body{
+	margin: 0;
+	padding: 0;
+	width:100%;
+	height: 100vh;
+	font-family: 'karla';
+	font-weight: 400;
+	background: url(images/panel.jpg);
+	background-position: center;
+	background-size: cover;
+	background-color: #000;
+	
+}
+
+.content{
+	width: 75%;
+	float: center;
+	color: #d8d8d8;
+	margin-left: 25px;
+	padding: 95px 50px;
+
+}
+
+.content h1 {
+	margin-bottom: 25px;
+	font-size: 30px;
+	font-weight: 900;
+
+}
+
+.text {
+	font-size: 15px;
+	color: #d8d8d8;
+	text-align: left;
+	margin-bottom; 40px;
+	
+}
+
+.values{
+	display: left;
+	justify-content: space-between;	
+	font-weight: 700;
+}
+
+@media screen and (max-width: 1200px){
+	
+	
+	.content{
+		padding: 80px;
+		
+	}
+	
+	
+}@media screen and (max-width: 1000px){
+	
+	.content{
+		width: 100%;
+		
+	}
+
+}
+@media screen and (max-width: 600px){
+	.content{
+		padding: 60px;
+	}
+}
+	
+@media screen and (max-width: 736px){
+	.logo{
+		padding: 0;
+	}
+	
+	.nav-wrapper{
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		background-color: #d8d8d8;
+		opacity: 0;
+		transition: all 0.2s ease;
+	
+	}
+	
+	.nav-wrapper ul{
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 100%;
+	
+	}
+	
+	.nav-wrapper ul li{
+		display: block;
+		float: none;
+		width: 100%;
+		text-align: right;
+		margin-bottom: 10px;
+		
+	}
+	
+	.nav-wrapper ul li: nth-child(1) a{
+		transition-delay: 0.2s;
+	}
+	
+	.nav-wrapper ul li: nth-child(2) a{
+		transition-delay: 0.3s;
+	} 
+	
+	.nav-wrapper ul li: nth-child(3) a{
+		transition-delay: 0.4s;
+	}
+	
+	.nav-wrapper ul li: nth-child(4) a{
+		transition-delay: 0.5s;
+	}
+	
+	.nav-wrapper ul li: not(first-child){
+		margin-left: 0;
+	}
+	
+	.nav-wrapper ul li a{
+		padding: 10px;
+		opacity: 0;
+		color: #d8d8d8;
+		font-size: 14px;
+		font-weight: 600;
+		letter-spacing: 1.2px;
+		transform: translateX(-20px);
+		transition: all 0.2s ease; 
+	}
+	
+	.nav-btn{
+		position: fixed;
+		right: 10px;
+		top: 10px;
+		display: block;
+		width: 48px;
+		height: 48px;
+		cursor: pointer;
+		z-index: 9999;
+		border-radius: 50%;
+	
+	}
+	
+	.nav-btn i {
+		display: block;
+		width: 20px; 
+		height: 2px;
+		background-color: #d8d8d8;
+		border-radius: 2px;
+		margin-left: 14px;
+	}
+	
+	.nav-btn i:nth-child(1){
+		margin-top: 16px;
+		
+	}
+	
+	.nav-btn i:nth-child(2){
+		margin-top: 4px;
+		opacity: 1;
+	}
+	
+	.nav-btn i:nth-child(3){
+		margin-top: 4px;
+	
+	}
+	.content{
+		padding: 60px;
+		
+	}
+
+}
+
+#nav:checked + .nav-btn{
+	transform: rotate(45deg);
+}
+
+#nav:checked + .nav-btn i{
+	background: #d8d8d8; 
+	transition: transform 0.2s ease;
+}
+
+#nav:checked + .nav-btn i: nth-child(1){
+	transform: translateY(6px) rotate(180deg);
+}
+
+#nav:checked + .nav-btn i: nth-child(2){
+	opacity 0;
+}
+
+#nav:checked + .nav-btn i: nth-child(3){
+	transform: translateY(-6px) rotate(90deg);
+}
+
+#nav:checked  ~ .nav-wrapper{
+	z-index: 9990;
+	opacity: 1;
+	
+}
+
+#nav:checked~ .nav-wrapper ul li a {
+	opacity: 1;
+	transform: translateX(0);
+
+}
+.hidden{
+	display: none;
+}
+

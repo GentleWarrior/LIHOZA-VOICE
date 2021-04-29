@@ -1,0 +1,158 @@
+ *{
+	padding:0;
+	margin: 0;
+	box-sizing: border-box;
+	
+ }
+ .navbar{
+	background-color:#008080;
+	color: #F8F8FF;
+	border-bottom: 0.5px solid gray;
+	width: 100%;
+	line-height: 80px;
+	height:80px;
+	font-size: 10px;
+	padding: 0 30px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-family: 'karla';
+}
+ 
+.navbar a{
+	text-decoration: none;
+	color: #000;
+	
+}
+
+.navbar a.nav-logo{
+	float: left;
+	height: inherit;
+	line-height: inherit;
+	padding: 0 30px;
+	font-size: 40px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-family: 'karla';
+	color: #000;
+	font-weight:bold;	
+}
+.navbar ul{
+	float: right;
+	list-style: none;
+	height: inherit;
+	line-height: inherit;
+	padding: 0 50px;
+	font-size: 15px;
+	font-weight: 100;
+	
+}
+.navbar ul  li{
+	display: inline-block;
+	
+}
+.navbar ul li a{
+	display: block;
+	text-align: center;
+	min-width: 120px;
+	padding: 0 30px;
+}
+.navbar ul li a: hover{
+	background-color: gray;
+}
+
+.content{
+	font-family: 'karla';
+	color: #000;
+	margin-top: 9%;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	
+}
+.text {
+	font-size: 15px;
+	color: #000;
+	text-align: center;
+	margin-top:1%;
+	margin-bottom; 40px;
+	
+	
+}
+
+.hpillars{
+	margin-left: 20px;
+	font-family: karla;
+	margin-bottom: 10px;
+
+}
+
+.hsocial{
+	margin-left: 20px;
+	font-family: karla;
+	margin-top: 4px;	
+	margin-bottom: 10px;
+
+}
+
+.pillars{
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 2%;
+	margin-bottom: 5px;
+	font-family: karla;
+	font-weight: extra-light 200;
+
+}
+
+
+.social{
+	display: flex;
+	justify-content: space-around;	
+	margin-top: 4%;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	font-family: karla;
+}
+
+.txt{
+	margin-top: 2%;
+	margin-bottom: 2%;
+	font-weight: 100;
+	color: #000;
+	font-family: karla;
+	margin-left: 20px;
+
+}
+
+
+@media screen and (max-width: 1200px){
+	
+	
+	.content{
+		padding: 80px;
+		
+	}
+	
+	
+}@media screen and (max-width: 1000px){
+	
+	.content{
+		width: 100%;
+		
+	}
+
+}
+@media screen and (max-width: 600px){
+	.content{
+		padding: 60px;
+	}
+}
+	
+@media screen and (max-width: 736px){
+
+	.content{
+		padding: 60px;
+		
+	}
+
+}
